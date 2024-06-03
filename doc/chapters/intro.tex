@@ -1,1 +1,20 @@
-Intro
+Question answering tasks have long been a central challenge within NLP.  The competition, named 
+"SemEval 2024 BRAINTEASER: A Novel Task Defying Common Sense" described in the paper \cite{semeval} is here to push modern models to their limits, putting
+them to a quite adversarial setting.  The paper makes a distinction between vertical and lateral
+thinking.  Vertical thinking, also known as linear, logical, convergent, is mostly a sequential and 
+analytical process, requiring direct memory recall or a few logical steps to come to a sensible 
+conclusion. Lateral thinking, also known as "thinking outside the box", is more of a divergent
+and creative process, where the question might not make sense when reading it at first and to come
+up with an answer you need to explore mutliple angles.  While LLMs show good vertical thinking 
+capabiliteis, they are notorious for hallucinating answers. An even more adversarial task for
+LLMs is answering questions which require lateral thinking.  State of the art models such as 
+ChatGPT show an accuracy of ~60\%, humans show a ~90\% accuracy, while a random 
+guessing gets close to 25\% accuracy as there are four answer candidates for each question
+\footnote[1]{These accuracies are
+fore one of the subtasks of the competition - "Sentence puzzles", which we will describe in more
+detail in the following chapters}.
+
+In this paper, we tackle the second subtask from the competition "Sentence puzzles" with an
+alternative approach which we believe will make it easier for the LLM to reason about all the
+possible answers.
+
