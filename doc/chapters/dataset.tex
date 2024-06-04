@@ -1,1 +1,55 @@
-Dataset
+As we've mentioned before the "BRAINTEASER" dataset consists of two types of puzzles, "Sentence puzzles"
+and "Word puzzles".  Word puzzles focus more on letter composition, defying the original meaning
+of the words at hand, shown in Table \ref{tab:word-puzzle-q}. These questions are not the focus of this paper.
+The second type of puzzles we find more interesting, so called "Sentence puzzles", shown in Table
+\ref{tab:sentence-puzzle-q}. The three step process of constructing the "BRAINTEASER" dataset
+is described in great detail in \citep{semeval}. The process consists of data collection(web scraping),
+distractor sampling and generating reconstruction examples. As some pre-trained models could have
+these questions in their training corpus, steps were made to ensure that the questions were novel
+for the models.  The data set consists of original data, semantic reconstruction data, context
+reconstruction data. The semantic reconstruction used an open-source rephrasing\footnote[3]{https://quillbot.com/} tool and 
+human annotators as quality control to rephrase the questions. The context reconstruction process
+used GPT-4 to initially shift the context of the question, as well as human annotators. In the 
+following sections we will refer to these distinct types of questions as \textbf{Ori.},
+\textbf{Sem.} and 
+\textbf{Con.} for original questions and semantic/context reconstruction respectivley. Lastly, the
+data was split into $507/120/120$ questions for the train/test/validation datasets respectivley.
+  
+
+\begin{table}
+	\caption{A \textbf{word puzzle} question(sub-task B). The correct answer is in \textbf{bold}.}
+	\label{tab:word-puzzle-q}
+	\begin{center}
+		\begin{tabular}{|p{3cm}|p{3cm}|}
+			\toprule
+			Question                          & Candidates             \\
+			\midrule
+			What part of London is in France? & \textbf{The letter N.} \\
+			                                  & The letter O.          \\
+			                                  & The letter L           \\
+			                                  & None of the above      \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+
+
+
+
+\begin{table}
+	\caption{A \textbf{sentence puzzle} examples(sub-task A). The correct answer is in \textbf{bold}.}
+	\label{tab:sentence-puzzle-q}
+	\begin{center}
+		\begin{tabular}{|p{3.2cm}|p{3.5cm}|}
+			\toprule
+			Question                                         & Candidates                                  \\
+			\midrule
+			A man shaves everyday, yet keeps his beard long. & \textbf{He is a barber.}                    \\
+			                                                 & He wants to maintain his appearance.        \\
+			                                                 & He wants his girlfriend to buy him a razor. \\
+			                                                 & None of the above                           \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table}
+

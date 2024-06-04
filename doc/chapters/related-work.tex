@@ -11,8 +11,9 @@ in such a way that it is required to consider multiple approaches when answering
 As this was a competition dataset, there were some previous works that tackled this problem. 
 A team of researchers from the National Technical University of Athens published their submission
 \citep{ails-lab} named "\textit{Transformer Models for Lateral Thinking Puzzles}".  They showed promising
-results, significantly outpreforming baselines reported in \citep{semeval}. Their approach consisted
-of lightweight tuning of the models for the original formulation of the problem as well as 
+results, significantly outpreforming baselines of 60\% reported in \citep{semeval}. Their approach consisted
+of lightweight tuning of the models with a straightforawrd approach, treating the problem as a
+multi-class classification task.  Aditionally, they preformed a 
 transformation of the problem to a binary classification problem.  The transformation took form of
 taking each question with four candidate answers and transforming it to three questions which 
 required a binary label, signaling if the answer was correct or not \footnote[2]{The fourth candidate

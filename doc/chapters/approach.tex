@@ -1,1 +1,14 @@
-Pairwise approach
+We preform a transformation of the questions in the following way. Each tuple of a question and 
+its candidate answers
+$$
+    (Q,A,B,C,D)
+$$
+gets transformed into four tuples:
+
+\begin{align*}
+       (Q,A,B,C), \\ 
+       (Q,A,B,D), \\
+       (Q,A,C,D), \\
+       (Q,B,C,D).
+\end{align*}
+In this way we forced the model to compare pairs of candidate answers with each other.
