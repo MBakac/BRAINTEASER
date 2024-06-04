@@ -1,1 +1,29 @@
-Related Work
+Reasoning in NLP is a hot topic, with LLMs in the center of attention.  It is no secret that 
+LLMs are far from perfect and it takes only one session of asking questions about a
+topic one is well versed in to see inconsistencies, but also be amazed at times.  Knowing where
+a model fails is important and leads to improvement.  Many benchmarks have been made with the
+purpose of challenging models with more intricate reasoning like "Commonsense QA"
+\citep{commonsenseQA}, a dataset consisting of questions which are easy for humans and requrire
+no prior knowlege like a specific document or context, just common sense.  Similarly the "BRAINTEASER"
+\citep{semeval} is a benchmark dataset consisting of questions which are constructed
+in such a way that it is required to consider multiple approaches when answering them.
+
+As this was a competition dataset, there were some previous works that tackled this problem. 
+A team of researchers from the National Technical University of Athens published their submission
+\citep{ails-lab} named "\textit{Transformer Models for Lateral Thinking Puzzles}".  They showed promising
+results, significantly outpreforming baselines reported in \citep{semeval}. Their approach consisted
+of lightweight tuning of the models for the original formulation of the problem as well as 
+transformation of the problem to a binary classification problem.  The transformation took form of
+taking each question with four candidate answers and transforming it to three questions which 
+required a binary label, signaling if the answer was correct or not \footnote[2]{The fourth candidate
+answer was always "None of the above" so they discarded it.}. Their results showed that the 
+transformation was not quite useful, as the same models had somewhat worse accuracies when
+the transformation was applied.  
+
+This inspired us to explore another transformation of the problem, as we believe that subjecting
+a model to only one candidate answer takes away information.  When one is answering a question
+with candidate answers, it is a good idea to eliminate candidates that are somewhat obviously wrong.
+That is why we believe an approach where we force a model to choose between two candidate answers
+at a time might be helpful, this is described in detail in Section \ref{approach}
+
+% TODO spellcheck
