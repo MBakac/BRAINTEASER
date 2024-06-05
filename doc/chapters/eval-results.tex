@@ -1,15 +1,60 @@
+Eval Results
+
 \begin{table*}
-	\caption{Wide-table caption}
-	\label{tab:results-table}
+	\caption{Sentence puzzle}
+	\label{tab:sentence-results-table}
 	\begin{center}
 		\begin{tabular}{lcccccc}
 			\toprule
-			\textbf{System}       & \textbf{Original} & \textbf{Semantic} & \textbf{Context} & \textbf{Ori. + Sem.} & \textbf{Ori. + Sem. + Con.} & \textbf{Overall} \\
+			\textbf{System}           & \textbf{Original} & \textbf{Semantic} & \textbf{Context} & \textbf{Ori. + Sem.} & \textbf{Ori. + Sem. + Con.} & \textbf{Overall} \\
 			\midrule
-			\color{gray}Human     & \color{gray}.907  & \color{gray}.907  & \color{gray}.944 & \color{gray}.907     & \color{gray}.889            & \color{gray}.920 \\
-			\color{gray}ChatGPT   & \color{gray}.608  & \color{gray}.593  & \color{gray}.679 & \color{gray}.507     & \color{gray}.397            & \color{gray}.627 \\
-			\color{gray}RoBERTa-L & \color{gray}.435  & \color{gray}.402  & \color{gray}.464 & \color{gray}.330     & \color{gray}.201            & \color{gray}.434 \\
+			\multicolumn{7}{c}{\textbf{Multi-class classification problem}}                                                                                              \\
 			\midrule
+			\color{gray}Human         & \color{gray}.907  & \color{gray}.907  & \color{gray}.944 & \color{gray}.907     & \color{gray}.889            & \color{gray}.920 \\
+			\color{gray}ChatGPT       & \color{gray}.608  & \color{gray}.593  & \color{gray}.679 & \color{gray}.507     & \color{gray}.397            & \color{gray}.627 \\
+			\color{gray}RoBERTa-L     & \color{gray}.435  & \color{gray}.402  & \color{gray}.464 & \color{gray}.330     & \color{gray}.201            & \color{gray}.434 \\
+			\midrule
+			microsoft/deberta-v3-base & .775              & .775              & .700             & .775                 & .675                                           \\
+			FacebookAI/roberta-large  & .850              & .850              & .775             & .850                 & .700                                           \\
+			\midrule
+			\multicolumn{7}{c}{\textbf{Binary classification problem}}                                                                                                   \\
+			microsoft/deberta-v3-base & .650              & .650              & .525             & .625                 & .625                                           \\
+			FacebookAI/roberta-large  & .125              & .125              & .125             & .125                 & .125                                           \\
+			\midrule
+			\multicolumn{7}{c}{\textbf{Pairwise}}                                                                                                                        \\
+			\midrule
+			microsoft/deberta-v3-base & .650              & .570              & .650             & .650                 & .525                                           \\
+			Facebook/roberta-large    & .675              & .700              & .725             & .650                 & .600                                           \\
+			\bottomrule
+		\end{tabular}
+	\end{center}
+\end{table*}
+
+\begin{table*}
+	\caption{Word puzzle}
+	\label{tab:word-results-table}
+	\begin{center}
+		\begin{tabular}{lcccccc}
+			\toprule
+			\textbf{System}           & \textbf{Original} & \textbf{Semantic} & \textbf{Context} & \textbf{Ori. + Sem.} & \textbf{Ori. + Sem. + Con.} & \textbf{Overall} \\
+			\midrule
+			\multicolumn{7}{c}{\textbf{Multi-class classification problem}}                                                                                              \\
+			\midrule
+			\color{gray}Human         & \color{gray}.917  & \color{gray}.917  & \color{gray}.917 & \color{gray}.917     & \color{gray}.900            & \color{gray}.917 \\
+			\color{gray}ChatGPT       & \color{gray}.561  & \color{gray}.524  & \color{gray}.518 & \color{gray}.439     & \color{gray}.292            & \color{gray}.535 \\
+			\color{gray}RoBERTa-L     & \color{gray}.195  & \color{gray}.195  & \color{gray}.232 & \color{gray}.146     & \color{gray}.061            & \color{gray}.207 \\
+			\midrule
+			deberta-v3-base           & .625              & .688              & .625             & .594                 & .375                                           \\
+			FacebookAI/roberta-large  & .312              & .375              & .438             & .250                 & .188                                           \\
+			\midrule
+			\multicolumn{7}{c}{\textbf{Binary classification problem}}                                                                                                   \\
+			\midrule
+			microsoft/deberta-v3-base & .000              & .000              & .000             & .000                 & .000                        & .000             \\
+			FacebookAI/roberta-large  & .000              & .000              & .000             & .000                 & .000                        & .000             \\
+			\midrule
+			\multicolumn{7}{c}{\textbf{Pairwise}}                                                                                                                        \\
+			\midrule
+			microsoft/deberta-v3-base & .562              & .469              & .500             & .469                 & .250                                           \\
 			\bottomrule
 		\end{tabular}
 	\end{center}
