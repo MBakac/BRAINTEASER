@@ -12,11 +12,11 @@ As this was a competition dataset, there were some previous works that tackled t
 A team of researchers from the National Technical University of Athens published their submission
 \citep{ails-lab} named "\textit{Transformer Models for Lateral Thinking Puzzles}".  They showed promising
 results, significantly outperforming baselines of 60\% reported in \citep{semeval}. Their approach consisted
-of lightweight tuning of the models with a straightforward approach, treating the problem as a
+of fine tuning models with a straightforward approach, treating the problem as a
 multi-class classification task. Additionally, they performed a
 transformation of the problem to a binary classification problem.  The transformation took form of
 taking each question with four candidate answers and transforming it to three questions which 
-required a binary label, signaling if the answer was correct or not \footnote[2]{The fourth candidate
+required a binary label, signaling if the answer was correct or not \footnote[1]{The fourth candidate
 answer was always "None of the above" so they discarded it.}. Their results showed that the 
 transformation was not quite useful, as the same models had somewhat worse accuracies when
 the transformation was applied.  

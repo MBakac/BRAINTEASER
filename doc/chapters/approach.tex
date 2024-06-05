@@ -3,13 +3,12 @@ its candidate answers
 $$
     (Q,A,B,C,D)
 $$
-gets transformed into four tuples:
+gets transformed into three tuples:
 
 \begin{align*}
-       (Q,A,B,C), \\ 
        (Q,A,B,D), \\
        (Q,A,C,D), \\
        (Q,B,C,D).
 \end{align*}
-In this way we forced the model to compare pairs of candidate answers with each other, suppose that
-the correct answer is B, we ideally expect that the model 
+In this way we have no ambiguity with the ground truth labels, for example if the correct answer was
+$C$, then the ground truth label in the tuple $(Q,A,B,D)$ is $D$  (None of the above).  
