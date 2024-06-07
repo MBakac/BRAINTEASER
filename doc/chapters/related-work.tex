@@ -1,13 +1,13 @@
-Reasoning in NLP is a hot topic, with transformer-based models in the center of attention.
-It is no secret that transformer-based models are far from perfect, and it takes only one session of asking questions about a topic one is well versed in to see inconsistencies, but also be amazed at times.
-Knowing where a model fails is important and leads to improvement.  Many benchmarks have been made with the purpose of challenging models with more intricate reasoning, like "Commonsense QA" \citep{commonsenseQA}, a dataset consisting of questions that are easy for humans and require no prior knowledge, like a specific document or context, just common sense.
-Similarly, the "BRAINTEASER" \citep{semeval} is a benchmark dataset consisting of questions which are constructed in such a way that it is required to consider multiple approaches when answering them.
-As this was a competition dataset, there were some previous works that tackled this problem.
-A team of researchers from the National Technical University of Athens published their submission \citep{ails-lab} named "\textit{Transformer Models for Lateral Thinking Puzzles}".
+Reasoning is a hot topic in NLP, with transformer-based models in the center of attention.
+It is no secret that transformer-based models are far from perfect, and that it takes just one session of asking questions about a topic that one is well-versed in to see inconsistencies but also to be amazed at times.
+Knowing where a model fails is important and may lead to improvement.  Many benchmarks have been performed with the purpose of challenging models with more intricate reasoning, like "Commonsense QA" \citep{commonsenseQA}, a dataset comprised of questions that are easy for humans and that require no prior knowledge such as a specific document or context, and require just common sense.
+Similarly, "BRAINTEASER" \citep{semeval} is a benchmark dataset comprised of questions that are constructed in such a way that it is required to consider multiple approaches when answering them.
+As this was a competition dataset, there was previous work that tackled this problem.
+A team of researchers from the National Technical University of Athens published their submission \citep{ails-lab} titled "\textit{Transformer Models for Lateral Thinking Puzzles}".
 They showed promising results, significantly outperforming baselines of 60\% reported in \citep{semeval}.
-Their approach consisted of fine tuning models with a straightforward approach, treating the problem as a multi-class classification task. Additionally, they performed a transformation of the problem to a binary classification problem. 
-The transformation took form of taking each question with four candidate answers and transforming it to three questions which required a binary label, signaling if the answer was correct or not \footnote[1]{The fourth candidate answer was always "None of the above" so they discarded it.}.
+Their approach consisted of fine-tuning models with a straightforward approach, treating the problem as a multiclass classification task. Additionally they performed a transformation of the problem to a binary classification problem. 
+The transformation worked by taking each question with four candidate answers and mapping it to three questions that required a binary label, signalling whether the answer was correct or not \footnote[1]{The fourth candidate answer was always "None of the above" so they discarded it.}.
 Their results showed that the transformation was not quite useful, as the same models had somewhat worse accuracies when the transformation was applied.  
-This inspired us to explore another transformation of the problem, as we believe that subjecting a model to only one candidate answer takes away information.
-When one is answering a question with candidate answers, it is a good idea to eliminate candidates that are somewhat obviously wrong.
-That is why we believe an approach where we force a model to choose between two candidate answers at a time might be helpful, this is described in detail in Section \ref{approach}
+This inspired us to explore another transformation of the problem, as we believe that presenting a model with only one candidate answer takes away critical information.
+When one is answering a question with candidate answers, it is a good idea to eliminate candidates that are considered to be somewhat obviously wrong.
+That is why we believe that an approach where we force a model to choose between two candidate answers at a time might be helpful, and this is described in detail in Section \ref{approach}.

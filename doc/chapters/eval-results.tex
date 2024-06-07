@@ -1,19 +1,19 @@
-We compared the three described formulations of multiple choice answering across two BERT variantas and look at the model accuracy overall and specifically for \emph{semantic} and \emph{context} subsets separated for the Sentence puzzle and Word puzzle subtasks (Table \ref{tab:sentence-results-table} and Table \ref{tab:word-results-table}). 
+We compared the three described formulations of multiple-choice question answering across two BERT variants and looked at the model accuracy overall as well as specifically for \emph{semantic} and \emph{context} subsets separated for the Sentence puzzle and Word puzzle subtasks (Table \ref{tab:sentence-results-table} and Table \ref{tab:word-results-table}). 
 Instance- and group-based performance metrics for our models as well as the human, ChatGPT and RoBERTa-L baselines are presented.
 The results are presented in terms of accuracy.
-The individual metric columns: \emph{Original}, \emph{Semantic} and \emph{Context} in the tables represent the results on respective reconstructions in the dataset while the group metric columns: \emph{Ori. + Sem} and \emph{Ori. + Sem. + Con.} represent accuracy scores across multiple reconstructions of the same question.
+The individual metric columns \emph{Original}, \emph{Semantic} and \emph{Context} in the tables represent the results of respective reconstructions in the dataset, while the group metric columns \emph{Ori. + Sem} and \emph{Ori. + Sem. + Con.} represent accuracy scores across multiple reconstructions of the same question.
 
-\subsection{Zero accuracy in binary classification formulation} \ % malo lijepše sve to 
-A clear outliar in Table \ref{tab:word-results-table} are the accuracy results in in the binarcy classification formulation of multiple choice.
-This is due to the \emph{harsh} criteria for deciding on an answer with this approach where out of three binary question only one has to be a \emph{A}, \emph{B} or \emph{C} and the other two $D$ \emph{(None of the above)}.
-This, combined with the rather small dataset and, also the word puzzle task being overall harder (our models yielded overall worse accuracy scores for this task) meant that there were no cases where this approach worked, hence accuracy zero.
-Furthermore, we note that the models have been trained to have a strong bias towards answering negatively to all instances.
+\subsection{Zero accuracy in the binary classification formulation} \ % malo lijepše sve to 
+A clear outlier in Table \ref{tab:word-results-table} are the accuracy results in the binary classification formulation of multiple choice.
+This is due to the \emph{harsh} criteria for deciding on an answer with this approach where only one out of three binary questions has to be an \emph{A}, \emph{B} or \emph{C} and the other two $D$ \emph{(None of the above)}.
+This, combined with the rather small dataset, and also the word puzzle task being harder overall (our models yielded worse overall accuracy scores for this task), meant that there were no cases where this approach worked, hence the accuracy is zero.
+Furthermore, we note that the models have been trained to have a strong bias toward answering negatively to all instances.
 This is partially caused by the fact that the dataset used to train the models for binary classification is imbalanced, with a ratio of 1:3 between positive and negative instances.
-This is a significant issue, as the models are not able to learn the patterns of the positive instances, which are the ones that we are interested in finding out.
+This is a significant issue as the models are not able to learn the patterns of the positive instances, which are the ones that we are interested in finding out.
 The same poor results for this formulation were obtained by Panagiotopoulos et. al. \citep{ails-lab}.
 
 \subsection{Pairwise approach evaluation}
-Our pairwise approach showed perfomance on par with the baseline ChatGPT and RoBERTa-L models\citep{semeval} for individual metrics and better performance for group metrics for both subtasks.
-Comparing it with the multiclass classification approach, it perfomed worse accorss both subtasks.
-It showed better performance than the binary classification approach which showed miserable results accross the board.
-Evidently, training the model on questions and all answers (i.e. using the multiclass approach) yields the best results.
+Our pairwise approach showed performance on par with the baseline ChatGPT and RoBERTa-L models\citep{semeval} for individual metrics, and better performance for group metrics for both subtasks.
+Comparing our approach with the multiclass classification approach, our approach performed worse across both subtasks.
+Our approach showed better performance than the binary classification approach that showed miserable results across the board.
+Evidently, training the model on questions and all answers (i.e., using the multiclass approach) yields the best results.

@@ -1,39 +1,39 @@
-In this section we will discuss the different approaches to multiple choice question asking and describes the training pipeline.
-The source code is available on github\footnote[3]{\url{https://github.com/MBakac/BRAINTEASER}}.
+In this section we will discuss the different approaches to asking multiple-choice questions and describe the training pipeline.
+The source code is available on GitHub\footnote[3]{\url{https://github.com/MBakac/BRAINTEASER}}.
 \subsection{Reframing multiple choice}
-This section will discuss the main point of this paper -- different formulations of a multiple choice question for BERT.
-We first describe the already explored multiclass classification and binary classification approaches and introduce the pairwise classification approach.
+This section will discuss the main point of this paper -- different formulations of a multiple-choice question for BERT.
+We will first describe the already explored multiclass and binary classification approaches and introduce the pairwise classification approach.
 
 \subsubsection{Multiclass classification}
-For this approach, the question and answers are concatenated together and the problem is framed as multiclass classification where the classes are answers $A$, $B$, $C$ and $D$ (None of the above).
-The main advantage of this approach is that the model sees all the answers in every pass.
+For the multiclass classification approach, the question and answers are concatenated and the problem is framed as multiclass classification where the classes are answers $A$, $B$, $C$, and $D$ (None of the above).
+The main advantage of this approach is that the model sees all the answers in each pass.
 
 \subsubsection{Binary classification}
-In reframing the problem as a binary classification task we take every question and answer pair and label it $1$ if the answer is the correct one, $0$ otherwise.
-When determening the final choice answer for each question, we group the pairs by question and if the model outputs $1$ for only one answer we chose that answer, otherwise $D$ (None of the above) is chosen.
-One advantage of this is that we artificially have more traning examples, i.e. question answer pairs.
+In reframing the problem as a binary classification task we take every question and answer pair and label it $1$ if the answer is the correct one, and $0$ otherwise.
+When determining the final chosen answer for each question, we group the pairs by question, and, if the model outputs $1$ for only one answer, we chose that answer, otherwise $D$ (None of the above) is chosen.
+One advantage of this is that we artificially have more training examples, i.e., question-answer pairs.
 
 \subsubsection{Pairwise approach}
-For this, new approach, we preform a transformation of the questions in the following way.
-Each tuple of a question and its candidate answers
+For the new pairwise approach, we transform the questions in the following way.
+Each tuple comprised of a question and its candidate answers
 $$
     (Q,A,B,C,D)
 $$
-gets transformed into three tuples:
+is transformed into three tuples:
 \begin{align*}
        (Q,A,B,D), \\
        (Q,A,C,D), \\
        (Q,B,C,D).
 \end{align*}
-In case the correct answer was $C$, the ground truth label in the tuple $(Q,A,B,D)$ is $D$ (None of the above).
-For each set of touples, \emph{votes} for each answer are counted and the most voted answer is chosen.
-We aim to see if this approach that samples distractors multiple times for each example yields better results.
+In case the correct answer was $C$, the ground-truth label in the tuple $(Q,A,B,D)$ is $D$ (None of the above).
+For each set of tuples, \emph{votes} for each answer are counted and the answer with the most votes is chosen.
+We aim to see if this approach sampling distractors multiple times for each example will yield better results.
 
 \subsection{Training process}
-In line with the approach taken by \citep{ails-lab} we load a pretrained BERT-like model from huggingface.
-The data and evaluation function is modified according to the reformulation and a BERT-like model is fine-tuned to the data.
+In line with the approach taken by \citep{ails-lab} we load a pre-trained BERT-like model from Hugging Face.
+The data evaluation function is modified according to the reformulation and a BERT-like model is fine-tuned to the data.
 
-For this work we decided to use general pretrained models RoBERTa-large\footnote[4]{\url{https://huggingface.co/FacebookAI/roberta-large}} \citep{roberta} and DeBERTa-v3-base\footnote[5]{\url{https://huggingface.co/microsoft/deberta-v3-base}} \citep{deberta} as our goal was to compare different formulations, not to achieve the highest score.
-For future work, this could be tried with other, less general, fine-tuned BERT-like models.
+For this work we decided to use general pre-trained models RoBERTa-large\footnote[4]{\url{https://huggingface.co/FacebookAI/roberta-large}} \citep{roberta} and DeBERTa-v3-base\footnote[5]{\url{https://huggingface.co/microsoft/deberta-v3-base}} \citep{deberta} as our goal was to compare different formulations, and was not to achieve the highest score.
+For future work, this approach could be taken with less general, fine-tuned BERT-like models.
 
 \pagebreak
