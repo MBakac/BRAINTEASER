@@ -6,7 +6,7 @@
 			\toprule
 			\textbf{System}           & \textbf{Original} & \textbf{Semantic} & \textbf{Context} & \textbf{Ori. + Sem.} & \textbf{Ori. + Sem. + Con.} & \textbf{Overall} \\
 			\midrule
-			\multicolumn{7}{c}{\textbf{Multi-class classification problem}}                                                                                              \\
+			\multicolumn{7}{c}{\textbf{Multiclass classification problem}}                                                                                              \\
 			\midrule
 			\color{gray}Human         & \color{gray}.907  & \color{gray}.907  & \color{gray}.944 & \color{gray}.907     & \color{gray}.889            & \color{gray}.920 \\
 			\color{gray}ChatGPT       & \color{gray}.608  & \color{gray}.593  & \color{gray}.679 & \color{gray}.507     & \color{gray}.397            & \color{gray}.627 \\
@@ -36,7 +36,7 @@
 			\toprule
 			\textbf{System}           & \textbf{Original} & \textbf{Semantic} & \textbf{Context} & \textbf{Ori. + Sem.} & \textbf{Ori. + Sem. + Con.} & \textbf{Overall} \\
 			\midrule
-			\multicolumn{7}{c}{\textbf{Multi-class classification problem}}                                                                                              \\
+			\multicolumn{7}{c}{\textbf{Multiclass classification problem}}                                                                                              \\
 			\midrule
 			\color{gray}Human         & \color{gray}.917  & \color{gray}.917  & \color{gray}.917 & \color{gray}.917     & \color{gray}.900            & \color{gray}.917 \\
 			\color{gray}ChatGPT       & \color{gray}.561  & \color{gray}.524  & \color{gray}.518 & \color{gray}.439     & \color{gray}.292            & \color{gray}.535 \\
@@ -61,7 +61,7 @@
 
 We compared the three described formulations of multiple choice answering across two BERT variantas and look at the model accuracy overall and specifically for \emph{semantic} and \emph{context} subsets separated for the two subtasks (Table \ref{tab:sentence-results-table} and Table \ref{tab:word-results-table}).
 
-\paragraph{Zero accuracy in binary classification formulation} % malo lijepše sve to 
+\paragraph{Zero accuracy in binary classification formulation} \\ % malo lijepše sve to 
 A clear outliar in Table \ref{tab:word-results-table} are the accuracy results in in the binarcy classification formulation of multiple choice.
 This is due to the \emph{harsh} criteria for deciding on an answer with this approach where out of three binary question only one has to be a \emph{A}, \emph{B} or \emph{C} and the other two \emph{D - none of the above}. This, combined with the rather small dataset and, also the word puzzle task being overall harder (our models yielded overall worse accuracy scores for this task) meant that there were no cases where this approach worked, hence accuracy zero.
 Furthermore, the same poor results for this formulation were obtained by Panagiotopoulos et. al. \citep{ails-lab}.

@@ -4,7 +4,7 @@ The paper makes a distinction between vertical and lateral thinking.
 Vertical thinking, also known as linear, logical, or convergent, is mostly a sequential and analytical process, requiring direct memory recall or a few logical steps to come to a sensible conclusion.
 Lateral thinking, also known as "thinking outside the box," is more of a divergent and creative process, where the question might not make sense when reading it at first, and to come up with an answer, you need to explore multiple angles.
 An even more adversarial task for transformer-based models is answering questions that require lateral thinking. State-of-the-art models such as ChatGPT show an accuracy of ~60\%, humans show a ~90\% accuracy, while random guessing gets close to 25\% accuracy as there are four answer candidates for each question \citep{semeval}.
-In this paper, we tackle the "BRAINTEASER" puzzles with an alternative approach which we believe will make it easier for transformer models to reason about all the possible answers, focusing on BERT-like models.
+In this paper, we tackle the "BRAINTEASER" puzzles with an alternative approach which we believe will make it easier for transformer models to reason about all the possible answers, focusing on BERT-like models \cite{devlin}.
 The puzzles are structured as multiple choice questions with one question being \emph{"None of the above"}.
 Our goal is to compare different ways of formulating a multiple choice question by fine tuning BERT-like models on these formulations.
 In Section \ref{dataset} we will describe the form of the two types of puzzles. 
