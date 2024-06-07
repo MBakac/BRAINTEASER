@@ -10,7 +10,7 @@ The main advantage of this approach is that the model sees all the answers in ev
 
 \subsubsection{Binary classification}
 In reframing the problem as a binary classification task we take every question and answer pair and label it $1$ if the answer is the correct one, $0$ otherwise.
-When determening the final choice answer for each question, we group the pairs by question and if the model outputs $1$ for only one answer, otherwise $D$ (None of the above) is chosen.
+When determening the final choice answer for each question, we group the pairs by question and if the model outputs $1$ for only one answer we chose that answer, otherwise $D$ (None of the above) is chosen.
 One advantage of this is that we artificially have more traning examples, i.e. question answer pairs.
 
 \subsubsection{Pairwise approach}
@@ -25,7 +25,8 @@ gets transformed into three tuples:
        (Q,A,C,D), \\
        (Q,B,C,D).
 \end{align*}
-In case the correct answer was $C$, then the ground truth label in the tuple $(Q,A,B,D)$ is $D$ (None of the above).
+In case the correct answer was $C$, the ground truth label in the tuple $(Q,A,B,D)$ is $D$ (None of the above).
+For each set of touples, \emph{votes} for each answer are counted and the most voted answer is chosen.
 We aim to see if this approach that samples distractors multiple times for each example yields better results.
 
 \subsection{Training process}

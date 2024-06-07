@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex tar-2023-paper-template"] 1717779371 "tar-2023-paper-template.aux" "tar-2023-paper-template.bbl" "tar-2023-paper-template" 1717779372
+["bibtex tar-2023-paper-template"] 1717781468 "tar-2023-paper-template.aux" "tar-2023-paper-template.bbl" "tar-2023-paper-template" 1717781469
   "./tar2023.bst" 1684410592 22764 018f9025bbdd268dff4ff3d01283e34d ""
-  "tar-2023-paper-template.aux" 1717779372 4272 407b89b0c9df674e1defd3f08e9678f3 "pdflatex"
+  "tar-2023-paper-template.aux" 1717781469 4291 fff21e0b67b574ea2810335573694af8 "pdflatex"
   "tar2023.bib" 1717776732 6767 ed50eba9811740b67026931cf602e08f ""
   (generated)
   "tar-2023-paper-template.bbl"
   "tar-2023-paper-template.blg"
-["pdflatex"] 1717779371 "tar-2023-paper-template.tex" "tar-2023-paper-template.pdf" "tar-2023-paper-template" 1717779372
+["pdflatex"] 1717781468 "tar-2023-paper-template.tex" "tar-2023-paper-template.pdf" "tar-2023-paper-template" 1717781469
   "/etc/texmf/web2c/texmf.cnf" 1714065977 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -94,6 +94,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1642022539 29921 f0f4f870357ebfb8fe58ed9ed4ee9b92 ""
   "/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg" 1279039959 678 4792914a8f45be57bb98413425e4c7af ""
   "/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty" 1575499565 5766 13a9e8766c47f30327caf893ece86ac8 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty" 1137110565 4087 636308456f60d2b31cbf97867db5708d ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/omspcr.fd" 1137110629 576 907c194ce74186f4e40247f2ba1986cf ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd" 1137110629 985 1ed784d7bfe47179f3550d2303b073f8 ""
   "/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd" 1137110629 961 15056f4a61917ceed3a44e4ac11fcc52 ""
@@ -108,13 +109,14 @@
   "chapters/approach.tex" 1717779370 2622 8463943b7ab55461954db02d5d50b8bf ""
   "chapters/conclusion.tex" 1717577035 11 e70ae60f92de7aa167af9176d31ef018 ""
   "chapters/dataset.tex" 1717776904 2735 80757d0bdbc4d05847e3ae3c03ca38bd ""
-  "chapters/eval-results.tex" 1717774504 5816 54996b93fa02aef8e8e1ec3e242178db ""
+  "chapters/eval-results.tex" 1717781449 3603 ab62583333ceefc3961bdcab6b00c3a1 ""
   "chapters/intro.tex" 1717772440 1862 a3f81488932661802c553e32adb9c703 ""
   "chapters/related-work.tex" 1717771971 2393 55d7aa48db6b360d545ab9781dcd6397 ""
-  "tar-2023-paper-template.aux" 1717779372 4272 407b89b0c9df674e1defd3f08e9678f3 "pdflatex"
-  "tar-2023-paper-template.bbl" 1717779371 2493 d3ca1575645e9c8ac1de9499277d22c5 "bibtex tar-2023-paper-template"
-  "tar-2023-paper-template.out" 1717779372 1391 1539514aab7b69f9f4ccdbf936cad153 "pdflatex"
-  "tar-2023-paper-template.tex" 1717778476 2667 cd00d5942f196825319a328e4eed13c7 ""
+  "chapters/table.tex" 1717781125 4715 61dae625af66a432c2a99bc2535f13dd ""
+  "tar-2023-paper-template.aux" 1717781469 4291 fff21e0b67b574ea2810335573694af8 "pdflatex"
+  "tar-2023-paper-template.bbl" 1717781468 2493 d3ca1575645e9c8ac1de9499277d22c5 "bibtex tar-2023-paper-template"
+  "tar-2023-paper-template.out" 1717781469 1391 1539514aab7b69f9f4ccdbf936cad153 "pdflatex"
+  "tar-2023-paper-template.tex" 1717781086 2719 0e1a88a06c16876fad7a5fa294c76b04 ""
   "tar2023.sty" 1684410592 13457 c722be3d0f4101a5ab1bd822478bf8bc ""
   (generated)
   "tar-2023-paper-template.aux"
