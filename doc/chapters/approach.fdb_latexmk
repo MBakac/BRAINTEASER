@@ -1,11 +1,13 @@
 # Fdb version 3
-["pdflatex"] 1717774749 "approach.tex" "approach.pdf" "approach" 1717774749
+["pdflatex"] 1717783665 "approach.tex" "approach.pdf" "approach" 1717783665
   "/etc/texmf/web2c/texmf.cnf" 1714065977 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1714069281 2029478 d618df7f81224fec08f67d8e16aea02c ""
   "approach.aux" 1717774638 32 3985256e7290058c681f74d7a3565a19 ""
-  "approach.tex" 1717774748 906 87e60a11e6b41bc1a950cf1d647fe998 ""
+  "approach.tex" 1717782204 2741 dcd95e0aca32da4f2ac6f27b6fa9fa25 ""
   (generated)
   "approach.log"
   "approach.pdf"
