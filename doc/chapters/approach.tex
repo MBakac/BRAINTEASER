@@ -36,4 +36,14 @@ The data evaluation function is modified according to the reformulation and a BE
 For this work we decided to use general pre-trained models RoBERTa-large\footnote[4]{\url{https://huggingface.co/FacebookAI/roberta-large}} \citep{roberta} and DeBERTa-v3-base\footnote[5]{\url{https://huggingface.co/microsoft/deberta-v3-base}} \citep{deberta,debertav3} as our goal was to compare different formulations, and was not to achieve the highest score.
 For future work, this approach could be taken with less general, fine-tuned BERT-like models.
 
-\pagebreak
+In our study, we explore binary, pairwise, and multiple classification approaches, utilizing the Hugging Face Transformers library for model fine-tuning. 
+For each classification task, we preprocess the data by renaming the column "label" to "labels" and removing irrelevant columns such as "id", "question", "answer", 
+and distractors. The models are trained on a dataset tokenized using AutoTokenizer, and set to a format compatible with PyTorch. We employ the
+AutoModelForSequenceClassification for binary classification and AutoModelForMultipleChoice for both pairwise and multiple classification tasks. 
+The training hyperparameters are set to a batch size of 4, learning rate of 3e-5, and a varying number of epochs: 3 for binary and multiple classification, 
+and 1 for pairwise classification. The training process uses the AdamW optimizer and a linear scheduler with no warmup steps. The training arguments include 
+evaluating the model every 20 steps, logging every 20 steps, saving checkpoints every 100 steps, and disabling report integrations by setting report\_to=None. 
+The models are trained and evaluated on a CUDA-enabled GPU if available. The Trainer class from Hugging Face is employed to manage the training loop, with datasets 
+split into training and validation sets, ensuring a structured approach to model training and evaluation. The data collator is set to DataCollatorWithPadding for
+binary classification and DataCollatorForMultipleChoice for pairwise and multiple classification, to ensure proper handling of input padding. This comprehensive
+setup ensures that our methodology is thoroughly documented and reproducible for future research.
