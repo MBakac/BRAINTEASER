@@ -44,6 +44,4 @@ The training hyperparameters are set to a batch size of 4, learning rate of 3e-5
 and 1 for pairwise classification. The training process uses the AdamW optimizer and a linear scheduler with no warmup steps. The training arguments include 
 evaluating the model every 20 steps, logging every 20 steps, saving checkpoints every 100 steps, and disabling report integrations by setting report\_to=None. 
 The models are trained and evaluated on a CUDA-enabled GPU if available. The Trainer class from Hugging Face is employed to manage the training loop, with datasets 
-split into training and validation sets, ensuring a structured approach to model training and evaluation. The data collator is set to DataCollatorWithPadding for
-binary classification and DataCollatorForMultipleChoice for pairwise and multiple classification, to ensure proper handling of input padding. This comprehensive
-setup ensures that our methodology is thoroughly documented and reproducible for future research.
+split into training and validation sets, ensuring a structured approach to model training and evaluation. 
